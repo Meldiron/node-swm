@@ -29,7 +29,7 @@ From this description, your HEX file should look like `B1 0B 09 07`:
 
 ![CleanShot 2021-11-27 at 11 01 37@2x](https://user-images.githubusercontent.com/19310830/143676755-12adc5a2-c7e8-42e4-afa9-ed21b44c3ee4.png)
 
-Now you should understand how to convert decimal numbers to hexadecimal and how to use website Hexed to fill these HEX values into a file. This knowledge is required before continuing to next section, please make sure you fully understand it.
+Now you should understand how to convert decimal numbers to hexadecimal and how to use website HexedIt to fill these HEX values into a file. This knowledge is required before continuing to next section, please make sure you fully understand it.
 
 ---
 
@@ -174,6 +174,10 @@ My final slime world with all sections we learned so far is `B1 0B 09 07 FF FF 0
 
 > Slime world with my structure can be found here:
 > [wooden_floor.zip](https://github.com/Meldiron/node-swm/files/7611836/wooden_floor.zip)
+
+If we open our wooden_floor slime world in HexedIt, we can see our hex matches real values of the world:
+
+![CleanShot 2021-11-27 at 15 02 37@2x](https://user-images.githubusercontent.com/19310830/143684713-178d54e8-f5db-403c-ab2a-b49c9f94254a.png)
 
 ---
 
