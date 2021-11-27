@@ -100,13 +100,13 @@ For example, I want to use latest version, v9, so I use `09`.
 
 My server is running on version 1.17, so my byte will hold `07`.
 
-### TODO: 2 bytes (short) - xPos of chunk lowest x & lowest z
+## Lowest chunk X
 
-I didn't understand this part properly yet, but I noticed most works has really high numbers here, so for now I would say to always put `FF FF` here - giving you no limitations.
+2 bytes representing X of lowest possible chunk location. I believe this is required to support multiple world versions. On 1.17, I noticed the value is always `FF FF`. I would recommend trying this value or exporting any world on your Minecraft version to see what value it puts in there.
 
-### TODO: 2 bytes (short) - zPos
+### Lowest chunk Z
 
-Same as above. Always use `FF FF`
+Same as above, but for Z. Again, I noticed it's always `FF FF`on MC 1.17. Try that, or figure out what is used on your MC version.
 
 ### World width (in chunks)
 
@@ -143,11 +143,11 @@ In this section we will take simple Minecraft world and try to create slime form
 
 ![image](https://user-images.githubusercontent.com/19310830/143684648-01f9cf9a-5047-400e-98e2-62cbf4861c94.png)
 
-First, we need to understand boundaries of our building. We can ignore Y, but we will need to imagine rectangle of our building and find smallest and biggest X and Z of this imaginary selection.
+First, we need to understand boundaries of our building. We can ignore Y, but we will need to imagine rectangle of our building and find lowest and highest X and Z of this imaginary selection.
 
 ![image](https://user-images.githubusercontent.com/19310830/143684655-35f6816f-9297-427a-9239-68e0812835fa.png)
 
-As described on the screenshot, my smallest point is `X=-1 Z=-5` and my highest point is `X=18 Z=2`. From these values, I can easily calculate smallest and highest X and Z by finding in which chunk these 2 blocks are. My smallest block is in chunk `X=-1 Z=-1` and biggest one is in chunk `X=1 Z=0`.
+As described on the screenshot, my lowest point is `X=-1 Z=-5` and my highest point is `X=18 Z=2`. From these values, I can easily calculate lowest and highest X and Z by finding in which chunk these 2 blocks are. My lowest block is in chunk `X=-1 Z=-1` and highest one is in chunk `X=1 Z=0`.
 
 With that in mind, by doing simple math I find out my building uses space of 3x2 chunks.
 
