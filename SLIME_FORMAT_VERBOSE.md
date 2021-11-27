@@ -102,6 +102,8 @@ My server is running on version 1.17, so my byte will hold `07`.
 
 ## Lowest chunk X
 
+TODO: Update this and Z section. Unsigned/signed is the answer to my confusion. Also update example at the end.
+
 2 bytes representing X of lowest possible chunk location. I believe this is required to support multiple world versions. On 1.17, I noticed the value is always `FF FF`. I would recommend trying this value or exporting any world on your Minecraft version to see what value it puts in there.
 
 ### Lowest chunk Z
