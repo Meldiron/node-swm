@@ -102,13 +102,11 @@ My server is running on version 1.17, so my byte will hold `07`.
 
 ## Lowest chunk X
 
-TODO: Update this and Z section. Unsigned/signed is the answer to my confusion. Also update example at the end.
-
-2 bytes representing X of lowest possible chunk location. I believe this is required to support multiple world versions. On 1.17, I noticed the value is always `FF FF`. I would recommend trying this value or exporting any world on your Minecraft version to see what value it puts in there.
+2 bytes representing X of lowest possible chunk location. Let's say my lowest chunk was `X=-12 Y=-88`, then lowest `X=-12`, so HEX valie is `FF F4`. Make sure to look for **signed** version of HEX, since we are using negative numbers.
 
 ### Lowest chunk Z
 
-Same as above, but for Z. Again, I noticed it's always `FF FF`on MC 1.17. Try that, or figure out what is used on your MC version.
+Same as above, but for Z.
 
 ### World width (in chunks)
 
@@ -182,6 +180,10 @@ If we open our wooden_floor slime world in HexedIt, we can see our hex matches r
 ![CleanShot 2021-11-27 at 15 02 37@2x](https://user-images.githubusercontent.com/19310830/143684713-178d54e8-f5db-403c-ab2a-b49c9f94254a.png)
 
 ---
+
+### Chunks
+
+TODO: Write
 
 ## Examples
 
